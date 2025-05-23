@@ -1,0 +1,347 @@
+<Window  xmlns="https://github.com/avaloniaui"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:vm="clr-namespace:DiplomApp.ViewModels;assembly=DiplomApp"
+         xmlns:local="clr-namespace:DiplomApp.Views;assembly=DiplomApp"
+         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         x:Class="DiplomApp.Views.MainWindow"
+         x:DataType="vm:MainWindowViewModel"
+         WindowState="Maximized"
+		 RequestedThemeVariant="Dark"
+         CanResize="True"
+         Background="#202020"
+         Icon="/Assets/avalonia-logo.ico"
+		 Title="Инженер Мастер">
+
+	<Design.DataContext>
+		<vm:MainWindowViewModel/>
+	</Design.DataContext>
+
+	<Window.Resources>
+		<local:InvertBoolConverter x:Key="BoolInvert"/>
+	</Window.Resources>
+
+	<!-- две основные колонки: ввод‑параметров / вывод‑результатов -->
+	<Grid ColumnDefinitions="*,2*">
+
+		<!-- ═════════════════════  ЛЕВАЯ ПАНЕЛЬ  ═════════════════════ -->
+
+				<!-- шаблон для каждой строки (label | slider | textbox) -->
+				<!-- Column 0 — подпись, Column 1 — ползунок, Column 2 — числовой ввод -->
+				<!-- ширина первой колонки одинаковая, поэтому все слайдеры стартуют строго в одной вертикали -->
+
+				<!-- ─────────── ФИЗИКА ─────────── -->
+		<Grid RowDefinitions="*, Auto, Auto" Margin="10" Grid.Column="0" >
+			
+			<ScrollViewer Grid.Row="0">
+				
+				<StackPanel Orientation="Vertical"
+							Spacing="8"
+							Margin="10">
+					
+					<Border BorderBrush="Gray" BorderThickness="1" Padding="5" >
+						<StackPanel>
+							<TextBlock Text="Физические параметры" FontWeight="Bold"/>
+
+							<!-- ρ -->
+							<Grid Margin="0,4" ColumnDefinitions="150,*,Auto">
+								<TextBlock Grid.Column="0" Text="Плотность ρ, кг/м³" VerticalAlignment="Center"
+											TextWrapping="Wrap"/>
+								<Slider    Grid.Column="1" Minimum="500" Maximum="2000"
+											Value="{Binding Config.Physical.WaterDensity, Mode=TwoWay}"/>
+								<TextBox   Grid.Column="2" Width="50" Height="25" Margin="8,0,0,0"
+											Text="{Binding Config.Physical.WaterDensity, Mode=TwoWay}"/>
+							</Grid>
+
+							<!-- c_p -->
+							<Grid Margin="0,4" ColumnDefinitions="150,*,Auto">
+								<TextBlock Grid.Column="0" Text="Теплоёмкость cₚ, Дж/(кг·К)"
+											TextWrapping="Wrap" VerticalAlignment="Center"/>
+								<Slider    Grid.Column="1" Minimum="1000" Maximum="6000"
+											Value="{Binding Config.Physical.SpecificHeatCapacity, Mode=TwoWay}"/>
+								<TextBox   Grid.Column="2" Width="50" Height="25" Margin="8,0,0,0"
+											Text="{Binding Config.Physical.SpecificHeatCapacity, Mode=TwoWay}"/>
+							</Grid>
+
+							<!-- k -->
+							<Grid Margin="0,4" ColumnDefinitions="150,*,Auto">
+								<TextBlock Grid.Column="0" Text="Теплопроводность k, Вт/(м·К)"
+											TextWrapping="Wrap" VerticalAlignment="Center"/>
+								<Slider    Grid.Column="1" Minimum="0.1" Maximum="5"
+											Value="{Binding Config.Physical.ThermalConductivity, Mode=TwoWay}"/>
+								<TextBox   Grid.Column="2" Width="50" Height="25" Margin="8,0,0,0"
+											Text="{Binding Config.Physical.ThermalConductivity, Mode=TwoWay}"/>
+							</Grid>
+						</StackPanel>
+					</Border>
+
+					<!-- ─────────── ТЕМПЕРАТУРЫ ─────────── -->
+					<Border BorderBrush="Gray" BorderThickness="1" Padding="5">
+						<StackPanel>
+							<TextBlock Text="Температуры" FontWeight="Bold"/>
+
+							<!-- T_env -->
+							<Grid Margin="0,4" ColumnDefinitions="150,*,Auto">
+								<TextBlock Grid.Column="0" Text="T_env, K" VerticalAlignment="Center"
+											TextWrapping="Wrap" />
+								<Slider    Grid.Column="1" Minimum="240" Maximum="310"
+											Value="{Binding Config.Physical.T_env, Mode=TwoWay}"/>
+								<TextBox   Grid.Column="2" Width="50" Height="25" Margin="8,0,0,0"
+											Text="{Binding Config.Physical.T_env, Mode=TwoWay}"/>
+							</Grid>
+
+							<!-- T_in -->
+							<Grid Margin="0,4" ColumnDefinitions="150,*,Auto">
+								<TextBlock Grid.Column="0" Text="T_in, K"
+											TextWrapping="Wrap" VerticalAlignment="Center"/>
+								<Slider    Grid.Column="1" Minimum="300" Maximum="400"
+											Value="{Binding Config.Physical.T_in, Mode=TwoWay}"/>
+								<TextBox   Grid.Column="2" Width="50" Height="25" Margin="8,0,0,0"
+											Text="{Binding Config.Physical.T_in, Mode=TwoWay}"/>
+							</Grid>
+
+							<!-- T_req -->
+							<Grid Margin="0,4" ColumnDefinitions="150,*,Auto">
+								<TextBlock Grid.Column="0" Text="T_req, K"
+											TextWrapping="Wrap" VerticalAlignment="Center"/>
+								<Slider    Grid.Column="1" Minimum="300" Maximum="380"
+											Value="{Binding Config.Physical.T_req, Mode=TwoWay}"/>
+								<TextBox   Grid.Column="2" Width="50" Height="25" Margin="8,0,0,0"
+											Text="{Binding Config.Physical.T_req, Mode=TwoWay}"/>
+							</Grid>
+						</StackPanel>
+					</Border>
+
+					<!-- ─────────── ГЕОМЕТРИЯ ─────────── -->
+					<Border BorderBrush="Gray" BorderThickness="1" Padding="5">
+						<StackPanel>
+							<TextBlock Text="Геометрия трубы" FontWeight="Bold"/>
+
+							<!-- L -->
+							<Grid Margin="0,4" ColumnDefinitions="150,*,Auto">
+								<TextBlock Grid.Column="0" Text="Длина L, м" VerticalAlignment="Center"
+											TextWrapping="Wrap" />
+								<Slider    Grid.Column="1" Minimum="100" Maximum="5000"
+											Value="{Binding Config.Geometry.Length_m, Mode=TwoWay}"/>
+								<TextBox   Grid.Column="2" Width="50" Height="25" Margin="8,0,0,0"
+											Text="{Binding Config.Geometry.Length_m, Mode=TwoWay}"/>
+							</Grid>
+
+							<!-- D_int -->
+							<Grid Margin="0,4" ColumnDefinitions="150,*,Auto">
+								<TextBlock Grid.Column="0" Text="Внутр. диаметр D, м" VerticalAlignment="Center"/>
+								<Slider    Grid.Column="1" Minimum="0.05" Maximum="1.0"
+											Value="{Binding Config.Geometry.D_int_m, Mode=TwoWay}"/>
+								<TextBox   Grid.Column="2" Width="50" Height="25" Margin="8,0,0,0"
+											Text="{Binding Config.Geometry.D_int_m, Mode=TwoWay}"/>
+							</Grid>
+
+							<!-- λ_fric -->
+							<Grid Margin="0,4" ColumnDefinitions="150,*,Auto">
+								<TextBlock Grid.Column="0" Text="Коэфф. трения λ" VerticalAlignment="Center"/>
+								<Slider    Grid.Column="1" Minimum="0.005" Maximum="0.1"
+											Value="{Binding Config.Geometry.LambdaFric, Mode=TwoWay}"/>
+								<TextBox   Grid.Column="2" Width="50" Height="25" Margin="8,0,0,0"
+											Text="{Binding Config.Geometry.LambdaFric, Mode=TwoWay}"/>
+							</Grid>
+						</StackPanel>
+					</Border>
+
+					<!-- ─────────── НАСОС ─────────── -->
+					<Border BorderBrush="Gray" BorderThickness="1" Padding="5">
+						<StackPanel>
+							<TextBlock Text="Параметры насоса" FontWeight="Bold"/>
+
+							<!-- H_static -->
+							<Grid Margin="0,4" ColumnDefinitions="150,*,Auto">
+								<TextBlock Grid.Column="0" Text="H статич., м" VerticalAlignment="Center"/>
+								<Slider    Grid.Column="1" Minimum="0" Maximum="200"
+											Value="{Binding Config.Pump.H_static_m, Mode=TwoWay}"/>
+								<TextBox   Grid.Column="2" Width="50" Height="25" Margin="8,0,0,0"
+											Text="{Binding Config.Pump.H_static_m, Mode=TwoWay}"/>
+							</Grid>
+
+							<!-- η_pump -->
+							<Grid Margin="0,4" ColumnDefinitions="150,*,Auto">
+								<TextBlock Grid.Column="0" Text="η насоса" VerticalAlignment="Center"/>
+								<Slider    Grid.Column="1" Minimum="0.1" Maximum="1.0" TickFrequency="0.05"
+											Value="{Binding Config.Pump.Eta_pump, Mode=TwoWay}"/>
+								<TextBox   Grid.Column="2" Width="50" Height="25" Margin="8,0,0,0"
+											Text="{Binding Config.Pump.Eta_pump, Mode=TwoWay}"/>
+							</Grid>
+
+							<!-- η_motor -->
+							<Grid Margin="0,4" ColumnDefinitions="150,*,Auto">
+								<TextBlock Grid.Column="0" Text="η двигателя" VerticalAlignment="Center"/>
+								<Slider    Grid.Column="1" Minimum="0.1" Maximum="1.0" TickFrequency="0.05"
+											Value="{Binding Config.Pump.Eta_motor, Mode=TwoWay}"/>
+								<TextBox   Grid.Column="2" Width="50" Height="25" Margin="8,0,0,0"
+											Text="{Binding Config.Pump.Eta_motor, Mode=TwoWay}"/>
+							</Grid>
+						</StackPanel>
+					</Border>
+
+					<!-- ─────────── СКОРОСТЬ ─────────── -->
+					<Border BorderBrush="Gray" BorderThickness="1" Padding="5">
+						<StackPanel>
+							<TextBlock Text="Диапазон скоростей" FontWeight="Bold"/>
+
+							<!-- V_MIN -->
+							<Grid Margin="0,4" ColumnDefinitions="150,*,Auto">
+								<TextBlock Grid.Column="0" Text="V min, м/с" VerticalAlignment="Center"/>
+								<Slider    Grid.Column="1" Minimum="0.1" Maximum="1.0"
+											Value="{Binding Config.Speed.V_MIN, Mode=TwoWay}"/>
+								<TextBox   Grid.Column="2" Width="50" Height="25" Margin="8,0,0,0"
+											Text="{Binding Config.Speed.V_MIN, Mode=TwoWay}"/>
+							</Grid>
+
+							<!-- V_MAX -->
+							<Grid Margin="0,4" ColumnDefinitions="150,*,Auto">
+								<TextBlock Grid.Column="0" Text="V max, м/с" VerticalAlignment="Center"/>
+								<Slider    Grid.Column="1" Minimum="1.0" Maximum="5.0"
+											Value="{Binding Config.Speed.V_MAX, Mode=TwoWay}"/>
+								<TextBox   Grid.Column="2" Width="50" Height="25" Margin="8,0,0,0"
+											Text="{Binding Config.Speed.V_MAX, Mode=TwoWay}"/>
+							</Grid>
+
+							<!-- Mseg -->
+							<Grid Margin="0,4" ColumnDefinitions="150,Auto,*">
+								<TextBlock   Grid.Column="0" Text="Число сегментов" VerticalAlignment="Center"/>
+								<NumericUpDown Grid.Column="1" Minimum="10" Maximum="200" Width="200"
+												Value="{Binding Config.Speed.Mseg, Mode=TwoWay}"/>
+							</Grid>
+						</StackPanel>
+					</Border>
+
+					<!-- ─────────── ВЕСА ─────────── -->
+					<Border BorderBrush="Gray" BorderThickness="1" Padding="5">
+						<StackPanel>
+							<TextBlock Text="Веса целевой функции" FontWeight="Bold"/>
+
+							<!-- α_J -->
+							<Grid Margin="0,4" ColumnDefinitions="150,*,Auto">
+								<TextBlock Grid.Column="0" Text="α_J (теплопотери)" VerticalAlignment="Center"/>
+								<Slider    Grid.Column="1" Minimum="0.1" Maximum="5.0" TickFrequency="0.1"
+											Value="{Binding Config.Weights.Alpha_J, Mode=TwoWay}"/>
+								<TextBox   Grid.Column="2" Width="50" Height="25" Margin="8,0,0,0"
+											Text="{Binding Config.Weights.Alpha_J, Mode=TwoWay}"/>
+							</Grid>
+							
+							<Grid Margin="0,4" ColumnDefinitions="150,*,Auto">
+								<TextBlock Grid.Column="0"
+										   Text="β_J (энергия насоса)"
+										   VerticalAlignment="Center"/>
+
+								<!-- очень маленькие числа, поэтому узкий диапазон -->
+								<Slider    Grid.Column="1"
+										   Minimum="-1000000000"
+										   Maximum="1"
+										   TickFrequency="1E-9"
+										   Value="{Binding Config.Weights.Beta_J, Mode=TwoWay}"/>
+
+								<TextBox   Grid.Column="2"
+										   Width="80" Height="25" Margin="8,0,0,0"
+										   Text="{Binding Config.Weights.Beta_J, Mode=TwoWay}"/>
+							</Grid>
+
+							<!-- γ_J -->
+							<Grid Margin="0,4" ColumnDefinitions="150,*,Auto">
+								<TextBlock Grid.Column="0"
+										   Text="γ_J (недогрев)"
+										   VerticalAlignment="Center"/>
+
+								<Slider    Grid.Column="1"
+										   Minimum="1000"        
+											Maximum="1000000"      
+											TickFrequency="1000"
+											Value="{Binding Config.Weights.Gamma_J, Mode=TwoWay}"/>
+
+								<TextBox   Grid.Column="2"
+										   Width="80" Height="25" Margin="8,0,0,0"
+										   Text="{Binding Config.Weights.Gamma_J, Mode=TwoWay}"/>
+							</Grid>
+
+							<!-- ΔT -->
+							<Grid Margin="0,4" ColumnDefinitions="150,*,Auto">
+								<TextBlock Grid.Column="0"
+										   Text="ΔT (диапазон)"
+										   VerticalAlignment="Center"/>
+
+								<Slider    Grid.Column="1"
+										   Minimum="0.1"
+										   Maximum="10"
+										   TickFrequency="0.1"
+										   Value="{Binding Config.Weights.DeltaT, Mode=TwoWay}"/>
+
+								<TextBox   Grid.Column="2"
+										   Width="80" Height="25" Margin="8,0,0,0"
+										   Text="{Binding Config.Weights.DeltaT, Mode=TwoWay}"/>
+							</Grid>
+
+							<!-- λ_Band -->
+							<Grid Margin="0,4" ColumnDefinitions="150,*,Auto">
+								<TextBlock Grid.Column="0"
+										   Text="λ_Band (штраф за выход из диапазона)"
+										   VerticalAlignment="Center"/>
+
+								<!-- очень крупные значения; используем широкий диапазон -->
+								<Slider    Grid.Column="1"
+										   Minimum="100000"
+										   Maximum="1000000000"
+										   TickFrequency="1E7"
+										   Value="{Binding Config.Weights.LambdaBand, Mode=TwoWay}"/>
+
+								<TextBox   Grid.Column="2"
+										   Width="120" Height="25" Margin="8,0,0,0"
+										   Text="{Binding Config.Weights.LambdaBand, Mode=TwoWay}"/>
+							</Grid>
+						</StackPanel>
+					</Border>
+				</StackPanel>
+
+			</ScrollViewer>
+			
+			<Border Height="1" Grid.Row="1"
+					HorizontalAlignment="Stretch"
+					Margin="5,5,5,10"
+					Background="Gray"/>
+			
+				<!-- ─────────── КНОПКИ ─────────── -->
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="12"
+						Grid.Row="2">
+				<Button Content="Запустить"
+						Command="{Binding PythonScriptRun_ClickButton}"
+						IsEnabled="{Binding IsBusy, Converter={StaticResource BoolInvert}}"/>
+				<ProgressBar Width="120" IsIndeterminate="True" IsVisible="{Binding IsBusy}"/>
+			</StackPanel>
+		</Grid>
+
+	
+
+		<!-- ═════════════════════  ПРАВАЯ ПАНЕЛЬ  ═════════════════════ -->
+		<Grid Grid.Column="1" RowDefinitions="3*, Auto, 1*">
+
+			<Border BorderBrush="Gray" BorderThickness="1" Margin="5">
+				<Image Stretch="Uniform"
+					   Source="{Binding ResultBitmap}"/>
+			</Border>
+
+			<GridSplitter Grid.Row="1"
+									  Height="5"
+									  ResizeBehavior="PreviousAndNext"
+									  ResizeDirection="Rows"
+									  Cursor="SizeNorthSouth"
+									  Background="Gray"
+						  Margin="5"/>
+			
+			<ScrollViewer Grid.Row="2">
+				<TextBox Text="{Binding OutputResult, Mode=TwoWay}"
+                         FontFamily="Consolas"
+                         AcceptsReturn="True"
+                         TextWrapping="Wrap"
+                         IsReadOnly="False"
+						 Margin="5"/>
+			</ScrollViewer>
+		</Grid>
+	</Grid>
+</Window>

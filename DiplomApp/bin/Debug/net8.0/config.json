@@ -1,0 +1,34 @@
+{
+  "Physical": {
+    "WaterDensity": 1000.0,
+    "SpecificHeatCapacity": 4186.0,
+    "ThermalConductivity": 0.6,
+    "T_env": 263.0,
+    "T_in": 348.0,
+    "T_req": 333.0,
+    "Beta_env": 0.0001,
+    "Tau_h": 3.0
+  },
+  "Geometry": {
+    "Length_m": 2000.0,
+    "D_int_m": 0.273,
+    "LambdaFric": 0.02
+  },
+  "Pump": {
+    "H_static_m": 55.0,
+    "Eta_pump": 0.74,
+    "Eta_motor": 0.92
+  },
+  "Speed": {
+    "V_MIN": 0.2,
+    "V_MAX": 2.0,
+    "Mseg": 60
+  },
+  "Weights": {
+    "Alpha_J": 1.0,
+    "Beta_J": 0.000000002,
+    "Gamma_J": 80000.0,
+    "DeltaT": 4.0,
+    "LambdaBand": 100000000.0
+  }
+}

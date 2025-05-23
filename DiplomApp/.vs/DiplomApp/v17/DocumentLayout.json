@@ -1,0 +1,152 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pavlo\\OneDrive\\Desktop\\Diploma\\DiplomApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{06996D95-ADBF-43C8-B8C7-8CCD92891143}|DiplomApp.csproj|c:\\users\\pavlo\\onedrive\\desktop\\diploma\\diplomapp\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{06996D95-ADBF-43C8-B8C7-8CCD92891143}|DiplomApp.csproj|solutionrelative:views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06996D95-ADBF-43C8-B8C7-8CCD92891143}|DiplomApp.csproj|c:\\users\\pavlo\\onedrive\\desktop\\diploma\\diplomapp\\app.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06996D95-ADBF-43C8-B8C7-8CCD92891143}|DiplomApp.csproj|solutionrelative:app.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06996D95-ADBF-43C8-B8C7-8CCD92891143}|DiplomApp.csproj|c:\\users\\pavlo\\onedrive\\desktop\\diploma\\diplomapp\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06996D95-ADBF-43C8-B8C7-8CCD92891143}|DiplomApp.csproj|solutionrelative:viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06996D95-ADBF-43C8-B8C7-8CCD92891143}|DiplomApp.csproj|c:\\users\\pavlo\\onedrive\\desktop\\diploma\\diplomapp\\views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06996D95-ADBF-43C8-B8C7-8CCD92891143}|DiplomApp.csproj|solutionrelative:views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06996D95-ADBF-43C8-B8C7-8CCD92891143}|DiplomApp.csproj|c:\\users\\pavlo\\onedrive\\desktop\\diploma\\diplomapp\\themes\\dark.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{06996D95-ADBF-43C8-B8C7-8CCD92891143}|DiplomApp.csproj|solutionrelative:themes\\dark.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06996D95-ADBF-43C8-B8C7-8CCD92891143}|DiplomApp.csproj|c:\\users\\pavlo\\onedrive\\desktop\\diploma\\diplomapp\\app.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{06996D95-ADBF-43C8-B8C7-8CCD92891143}|DiplomApp.csproj|solutionrelative:app.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06996D95-ADBF-43C8-B8C7-8CCD92891143}|DiplomApp.csproj|c:\\users\\pavlo\\onedrive\\desktop\\diploma\\diplomapp\\diplomapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{06996D95-ADBF-43C8-B8C7-8CCD92891143}|DiplomApp.csproj|solutionrelative:diplomapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06996D95-ADBF-43C8-B8C7-8CCD92891143}|DiplomApp.csproj|c:\\users\\pavlo\\onedrive\\desktop\\diploma\\diplomapp\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06996D95-ADBF-43C8-B8C7-8CCD92891143}|DiplomApp.csproj|solutionrelative:viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindowViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\pavlo\\OneDrive\\Desktop\\Diploma\\DiplomApp\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MainWindowViewModel.cs",
+              "ToolTip": "C:\\Users\\pavlo\\OneDrive\\Desktop\\Diploma\\DiplomApp\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MainWindowViewModel.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAArwKEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T15:55:20.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\pavlo\\OneDrive\\Desktop\\Diploma\\DiplomApp\\App.axaml.cs",
+              "RelativeDocumentMoniker": "App.axaml.cs",
+              "ToolTip": "C:\\Users\\pavlo\\OneDrive\\Desktop\\Diploma\\DiplomApp\\App.axaml.cs",
+              "RelativeToolTip": "App.axaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T17:09:25.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\pavlo\\OneDrive\\Desktop\\Diploma\\DiplomApp\\Views\\MainWindow.axaml",
+              "RelativeDocumentMoniker": "Views\\MainWindow.axaml",
+              "ToolTip": "C:\\Users\\pavlo\\OneDrive\\Desktop\\Diploma\\DiplomApp\\Views\\MainWindow.axaml",
+              "RelativeToolTip": "Views\\MainWindow.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-01T15:55:24.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dark.axaml",
+              "DocumentMoniker": "C:\\Users\\pavlo\\OneDrive\\Desktop\\Diploma\\DiplomApp\\Themes\\Dark.axaml",
+              "RelativeDocumentMoniker": "Themes\\Dark.axaml",
+              "ToolTip": "C:\\Users\\pavlo\\OneDrive\\Desktop\\Diploma\\DiplomApp\\Themes\\Dark.axaml",
+              "RelativeToolTip": "Themes\\Dark.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-23T17:06:12.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.axaml",
+              "DocumentMoniker": "C:\\Users\\pavlo\\OneDrive\\Desktop\\Diploma\\DiplomApp\\App.axaml",
+              "RelativeDocumentMoniker": "App.axaml",
+              "ToolTip": "C:\\Users\\pavlo\\OneDrive\\Desktop\\Diploma\\DiplomApp\\App.axaml",
+              "RelativeToolTip": "App.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-23T17:11:13.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\pavlo\\OneDrive\\Desktop\\Diploma\\DiplomApp\\Views\\MainWindow.axaml.cs",
+              "RelativeDocumentMoniker": "Views\\MainWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\pavlo\\OneDrive\\Desktop\\Diploma\\DiplomApp\\Views\\MainWindow.axaml.cs",
+              "RelativeToolTip": "Views\\MainWindow.axaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T16:01:34.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DiplomApp.csproj",
+              "DocumentMoniker": "C:\\Users\\pavlo\\OneDrive\\Desktop\\Diploma\\DiplomApp\\DiplomApp.csproj",
+              "RelativeDocumentMoniker": "DiplomApp.csproj",
+              "ToolTip": "C:\\Users\\pavlo\\OneDrive\\Desktop\\Diploma\\DiplomApp\\DiplomApp.csproj",
+              "RelativeToolTip": "DiplomApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-01T15:59:01.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ViewModelBase.cs",
+              "DocumentMoniker": "C:\\Users\\pavlo\\OneDrive\\Desktop\\Diploma\\DiplomApp\\ViewModels\\ViewModelBase.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ViewModelBase.cs",
+              "ToolTip": "C:\\Users\\pavlo\\OneDrive\\Desktop\\Diploma\\DiplomApp\\ViewModels\\ViewModelBase.cs",
+              "RelativeToolTip": "ViewModels\\ViewModelBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T15:58:57.568Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

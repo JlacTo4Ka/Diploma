@@ -1,0 +1,318 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:sys="clr-namespace:DiplomApp;assembly=netstandard"
+		>
+	<Design.PreviewWith>
+		<Border Padding="20">
+			<!-- Add Controls for Previewer Here -->
+			
+			
+		</Border>
+	</Design.PreviewWith>
+
+	<Style Selector="UserControl">
+		<Setter Property="Background" Value="White" />
+	</Style>
+	<Style Selector="Window">
+		<Setter Property="Background" Value="White" />
+	</Style>
+
+	<Style Selector="Panel">
+		<Setter Property="Background" Value="Transparent" />
+	</Style>
+	<Style Selector="StackPanel">
+		<Setter Property="Background" Value="Transparent" />
+	</Style>
+
+	<Style Selector="Border">
+		<Setter Property="BorderBrush" Value="Gray" />
+	</Style>
+
+	<Style Selector="Border#BorderBoxInstructions">
+		<Setter Property="Background" Value="White" />
+	</Style>
+	<Style Selector="Border#BorderPopupPoints">
+		<Setter Property="Background" Value="White" />
+	</Style>
+
+	<Style Selector="Button">
+		<Setter Property="BorderBrush" Value="Gray" />
+		<Setter Property="Background" Value="White" />
+	</Style>
+	<Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+		<Setter Property="BorderBrush" Value="Gray" />
+		<Setter Property="Background" Value="#E6E6E6" />
+	</Style>
+	<Style Selector="Button:pressed /template/ ContentPresenter#PART_ContentPresenter">
+		<Setter Property="BorderBrush" Value="#303030" />
+		<!--<Setter Property="Background" Value="#" />-->
+	</Style>
+	<Style Selector="Button:disabled /template/ ContentPresenter#PART_ContentPresenter">
+		<Setter Property="BorderBrush" Value="LightGray" />
+		<Setter Property="Background" Value="#DDDDDD" />
+	</Style>
+
+	<Style Selector="TextBox" >
+		<Setter Property="Background" Value="White"/>
+	</Style>
+
+	<Style Selector="TextBox:pointerover /template/ Border#PART_BorderElement">
+		<Setter Property="Background" Value="White"/>
+	</Style>
+
+	<Style Selector="TextBox:focus /template/ Border#PART_BorderElement">
+		<Setter Property="Background" Value="White" />
+	</Style>
+
+	<Style Selector="TextBox:disabled /template/ Border#PART_BorderElement">
+		<Setter Property="Background" Value="#CCCCCC"/>
+	</Style>
+
+	<Style Selector="Rectangle">
+		<Setter Property="Fill" Value="Gray" />
+	</Style>
+	<Style Selector="Rectangle#Info">
+		<Setter Property="Fill" Value="Gray" />
+	</Style>
+	<Style Selector="Rectangle#Result">
+		<Setter Property="Fill" Value="Gray" />
+	</Style>
+	<Style Selector="Rectangle#Test">
+		<Setter Property="Fill" Value="Gray" />
+	</Style>
+	<Style Selector="Rectangle#RectangleSelectedTestHide">
+		<Setter Property="Fill" Value="White" />
+	</Style>
+	<Style Selector="PathIcon#ComboBoxIcon">
+		<Setter Property="Foreground" Value="Black" />
+	</Style>
+
+
+	
+
+	<Style Selector="Label#Error">
+		<Setter Property="Foreground" Value="Red" />
+	</Style>
+
+	<Style Selector="Border#TestsAndMeasurementsBorder">
+		<Setter Property="Background" Value="White" />
+	</Style>
+
+
+	<Style Selector="Border#SettingsBorderLeft">
+		<Setter Property="Background" Value="White" />
+	</Style>
+
+	<Style Selector="Border#BorderTestingSample">
+		<Setter Property="BorderBrush" Value="LightGray" />
+	</Style>
+	<Style Selector="Border#BorderTestingSample1">
+		<Setter Property="BorderBrush" Value="LightGray" />
+	</Style>
+	<Style Selector="Border#BorderTestingSample2">
+		<Setter Property="BorderBrush" Value="LightGray" />
+	</Style>
+	<Style Selector="Border#BorderTestingSample3">
+		<Setter Property="BorderBrush" Value="LightGray" />
+	</Style>
+	<Style Selector="Border#BorderTestingSample4">
+		<Setter Property="BorderBrush" Value="LightGray" />
+	</Style>
+	<Style Selector="Border#BorderTestingSample5">
+		<Setter Property="BorderBrush" Value="LightGray" />
+	</Style>
+	<Style Selector="Border#BorderTestingSample6">
+		<Setter Property="BorderBrush" Value="LightGray" />
+	</Style>
+
+	<Style Selector="Rectangle#RectangleTestingSample1">
+		<Setter Property="Fill" Value="LightGray" />
+	</Style>
+	<Style Selector="Rectangle#RectangleTestingSample2">
+		<Setter Property="Fill" Value="LightGray" />
+	</Style>
+	<Style Selector="Rectangle#RectangleTestingSample3">
+		<Setter Property="Fill" Value="LightGray" />
+	</Style>
+
+	<Style Selector="Border#BorderBackgroundWisard">
+		<Setter Property="Background" Value="White" />
+	</Style>
+
+	<Style Selector="Panel#PanelBackgroundWisard">
+		<Setter Property="Background" Value="#CFCFCF" />
+	</Style>
+
+	<Style Selector="Panel#ResultsSettingsMenuBorder">
+		<Setter Property="Background" Value="White" />
+	</Style>
+
+	<Style Selector="Label#TreeLableContent">
+		<Setter Property="Foreground" Value="Black" />
+	</Style>
+
+	<Style Selector="Label#TreeLableContent2">
+		<Setter Property="Foreground" Value="Black" />
+	</Style>
+
+	<Style Selector="Label#TreeLableElement">
+		<Setter Property="Foreground" Value="Black" />
+	</Style>
+
+	<Style Selector="Label#TreeLableProjectName">
+		<Setter Property="Foreground" Value="Black" />
+	</Style>
+
+
+	<Style Selector="Border#BorderPopupInput">
+		<Setter Property="Background" Value="#EEEEEE" />
+	</Style>
+
+
+	<!--Auto Learn -->
+	<Style Selector="Border#BorderCenterLeft">
+		<Setter Property="Background" Value="LightGray" />
+	</Style>
+
+	<Style Selector="StackPanel#StackPanelCenterRight">
+		<Setter Property="Background" Value="LightGray" />
+	</Style>
+
+	<Style Selector="Label#LableSearch">
+		<Setter Property="Background" Value="LightGray" />
+	</Style>
+
+	<Style Selector="Label#LableResultMeasure">
+		<Setter Property="Background" Value="LightGray" />
+	</Style>
+
+	<Style Selector="Label#LableParamIntegrity">
+		<Setter Property="Background" Value="LightGray" />
+	</Style>
+
+	<Style Selector="Label#LableTestingProgramm">
+		<Setter Property="Background" Value="LightGray" />
+	</Style>
+
+	<Style Selector="Border#BorderOrigin">
+		<Setter Property="BorderBrush" Value="LightGray" />
+	</Style>
+
+	<Style Selector="Border#BorderOrigin1">
+		<Setter Property="BorderBrush" Value="LightGray" />
+	</Style>
+
+	<Style Selector="Border#BorderOrigin2">
+		<Setter Property="BorderBrush" Value="LightGray" />
+	</Style>
+
+	<Style Selector="Border#BorderIndifferer">
+		<Setter Property="BorderBrush" Value="LightGray" />
+	</Style>
+
+	<Style Selector="Border#BorderIndifferer1">
+		<Setter Property="BorderBrush" Value="LightGray" />
+	</Style>
+
+	<Style Selector="Border#BorderIndifferer2">
+		<Setter Property="BorderBrush" Value="LightGray" />
+	</Style>
+
+
+	<Style Selector="Border#BorderDescription">
+		<Setter Property="BorderBrush" Value="LightGray" />
+	</Style>
+
+	<Style Selector="Border#BorderDescription1">
+		<Setter Property="BorderBrush" Value="LightGray" />
+	</Style>
+
+	<Style Selector="Border#BorderDescription2">
+		<Setter Property="BorderBrush" Value="LightGray" />
+	</Style>
+
+	<Style Selector="ProgressBar">
+		<Setter Property="Foreground" Value="CornflowerBlue" />
+	</Style>
+
+	<Style Selector="Label#LabelProgressBar">
+		<Setter Property="Foreground" Value="Black" />
+	</Style>
+
+	<Style Selector="Label#LabelProgressBarP">
+		<Setter Property="Foreground" Value="Black" />
+	</Style>
+
+	<Style Selector="Border#BorderPopupDataGrid">
+		<Setter Property="Background" Value="White" />
+	</Style>
+	<!-- Add Styles Here -->
+
+	<Style Selector="Rectangle#RectangleLableMultiplexors">
+		<Setter Property="Fill" Value="White" />
+	</Style>
+
+	<Style Selector="Rectangle#RectangleLableModule">
+		<Setter Property="Fill" Value="White" />
+	</Style>
+
+	<Style Selector="StackPanel#StackPanelUpLeft">
+		<Setter Property="Background" Value="LightGray" />
+	</Style>
+
+	<Style Selector="StackPanel#StackPanelUpCenter">
+		<Setter Property="Background" Value="LightGray" />
+	</Style>
+
+	<Style Selector="StackPanel#StackPanelUpRight">
+		<Setter Property="Background" Value="LightGray" />
+	</Style>
+
+	<Style Selector="TextBox#TextBoxRename:pointerover /template/ Border#PART_BorderElement">
+		<Setter Property="Background" Value="#E6E6E6" />
+	</Style>
+	<Style Selector="TextBox#TextBoxRenameTable:pointerover /template/ Border#PART_BorderElement">
+		<Setter Property="Background" Value="#E6E6E6" />
+	</Style>
+
+	<Style Selector="Button#Button1:focus">
+		<Setter Property="BorderBrush" Value="Black"/>
+		<Setter Property="FocusAdorner" Value="{x:Null}"/>
+	</Style>
+
+	<Style Selector="Button#Button2:focus">
+		<Setter Property="BorderBrush" Value="Black"/>
+		<Setter Property="FocusAdorner" Value="{x:Null}"/>
+	</Style>
+
+	<Style Selector="Rectangle#ButtonsArea" >
+		<Setter Property="Fill" Value="#DDDDDD"/>
+	</Style>
+
+	<Style Selector="Rectangle#PrinterRect1" >
+		<Setter Property="Fill" Value="White"/>
+	</Style>
+
+	<Style Selector="Rectangle#PrinterRect2" >
+		<Setter Property="Fill" Value="White"/>
+	</Style>
+
+	<Style Selector="Rectangle#PrinterRect3" >
+		<Setter Property="Fill" Value="White"/>
+	</Style>
+
+	<Style Selector="ScrollViewer /template/ ScrollBar /template/ Thumb">
+		<Setter Property="Template">
+			<ControlTemplate>
+				<Border Background="{TemplateBinding Background}" CornerRadius="20" ClipToBounds="True"/>
+			</ControlTemplate>
+		</Setter>
+	</Style>
+
+	<Style Selector="ScrollViewer /template/ ScrollBar:vertical /template/ Rectangle#TrackRect">
+		<Setter Property="Fill" Value="Transparent"/>
+	</Style>
+	<Style Selector="ScrollViewer /template/ ScrollBar:horizontal /template/ Rectangle#TrackRect">
+		<Setter Property="Fill" Value="Transparent"/>
+	</Style>
+</Styles>
